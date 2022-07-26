@@ -22,7 +22,7 @@
     top: 0;
     background-color: transparent;
     position: fixed;
-    transition: all .2s;
+    transition: all .2s ease;
 }
 
 .header-apresentacao figure {
@@ -107,3 +107,111 @@ a {
 
 }
 
+@keyframes virarX {
+    to {
+        top: 20px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes virarX2 {
+    to {
+        top: 20px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes voltarX {
+    to {
+        top: 10px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes voltarX2 {
+    to {
+        top: 30px;
+        transform: rotate(0);
+    }
+}
+
+@keyframes abrirMenu {
+    to {
+        right: 3%;
+    }
+}
+
+@keyframes fecharMenu {
+    to {
+        right: -100%;
+    }
+}
+
+@media (max-width: 600px){
+
+    .header-apresentacao {
+        height: 8%;
+        justify-content: space-between;
+    }
+
+    .header-apresentacao nav {
+        width: 40%;
+        height: 800%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .header-apresentacao nav ul {
+        flex-direction: column;
+        text-align: center;
+        background-color: #369c59;
+        height: 43.5%;
+        width: 100%;
+        position: relative;
+        right: -100%;
+    }
+
+    .header-apresentacao ul li{
+        border-bottom: 2px solid white;
+        width: 90%;
+        
+    }
+
+    .header-apresentacao ul li:hover {
+        background-color: #216538ab;
+    }
+
+    .menu-botao {
+        height: 40px;
+        width: 40px;
+        top: 20%;
+        right: 5%;
+        position: absolute;
+    }
+
+    .menu-botao:hover{
+        cursor: pointer;
+    }
+
+    .menu-botao span {
+        display: inline-block;
+        width: 80%;
+        margin-left: 20%;
+        height: 10%;
+        background-color: rgb(36, 52, 36);
+        position: absolute;
+    }
+
+    .n1 {
+        top: 10px;
+    }
+
+    .n2 {
+        top: 20px;
+        transition: all .2s ease;
+    }
+
+    .n3 {
+        top: 30px;
+    }
+}
