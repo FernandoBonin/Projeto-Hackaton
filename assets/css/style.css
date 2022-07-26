@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.apresentacao {
+    height: 90vh;
+    width: 100vw;
+    border-bottom:10px solid #87a54dc8;
+}
+
+.header-apresentacao {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    z-index: 2;
+    top: 0;
+    background-color: transparent;
+    position: fixed;
+    transition: all .2s;
+}
+
+.header-apresentacao figure {
+    height: 80%;
+    width: 15%;
+    display: flex;
+}
+
+figure img {
+    height: 100%;
+    margin: auto;
+}
+
+.header-apresentacao nav {
+    width: 80%;
+    height: 100%;
+}
+
+.header-apresentacao nav ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font: 15pt helvetica;
+    font-weight: 600;
+    justify-content: flex-end;
+    gap: 4%;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-apresentacao li{
+    padding: 10px;
+    transition: all .2s normal;
+}
+
+.header-apresentacao li:hover {
+    border-bottom: 2px solid #e5ff9f52;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.apresentacao-2 {
+    height: 90%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-image: url('../img/senior-hardworking-farmer-agronomist-in-soybean-field-checking-crops-before-harvest\(3\).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    z-index: -1;
+}
+
+.apresentacao-2 h2 {
+    color: white;
+    height: 20%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30pt;
+}
+
+.secao-conhecer {
+    width: 100%;
+    height: 100vh;
+    background-color: #553ace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.secao-conhecer h3{
+    color: white;
+    font-weight: 800;
+    font-size: 40pt;
+
+
+}
+
