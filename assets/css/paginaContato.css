@@ -6,21 +6,19 @@
     box-sizing: border-box;
 }
 
-
-.apresentacao {
-    height: 90vh;
+body{
+    height: 100vh;
     width: 100vw;
-    border-bottom:10px solid #87a54dc8;
 }
 
 .header-apresentacao {
     display: flex;
     width: 100%;
-    height: 10%;
+    height: 10vh;
     align-items: center;
     z-index: 2;
     top: 0;
-    background-color: transparent;
+    background-color: rgba(69, 149, 40, 0.871);
     position: fixed;
     transition: all .2s ease;
 }
@@ -67,45 +65,100 @@ a {
     text-decoration: none;
 }
 
-.apresentacao-2 {
-    height: 90%;
-    width: 100%;
-    position: relative;
-    top: 0;
-    background-image: url('../img/senior-hardworking-farmer-agronomist-in-soybean-field-checking-crops-before-harvest\(3\).jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: flex-end;
-    z-index: -1;
-}
-
-.apresentacao-2 h2 {
-    color: white;
-    height: 20%;
-    text-transform: uppercase;
+.principal {
+    height: 70vh;
+    width: 40vw;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 8%;
     text-align: center;
-    font-size: 30pt;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Poppins', sans-serif;
+    color: #384336;
+    
+    /* border: 2px solid rgb(59, 81, 52); */
 }
 
-.secao-conhecer {
+.principal h2 {
+    height: 20%;
+    margin: auto;
+}
+
+.principal form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+    margin: auto;
+}
+
+.principal form input, .principal form div select  {
+    height: 10%;
+    outline: 0;
+    border: 2px solid #326229b0;
+    border-radius: 5px;
+    font-size: 14pt;
+    text-indent: 3%;
+}
+
+.principal form div {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.principal form div select {
+    height: 50%;
+    text-align: center;
+    font-size: 14pt;
+    color: #384336;
+    background-color: #1db55261;
+    display: flex;
+}
+
+.principal label {
+    align-self: flex-start;
+}
+
+.principal button {
+    height: 10%;
+    color: white;
+    background-color: rgba(120, 170, 19, 0.839);
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.principal button:hover {
+    background-color: rgb(69, 69, 19);
+}
+
+article {
     width: 100%;
-    height: 100vh;
-    background-color: #553ace;
+    height: 14%;
+    background-color: #040503a0;
+}
+
+article div {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    text-align: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.secao-conhecer h3{
-    color: white;
-    font-weight: 800;
-    font-size: 40pt;
-
-
+article div a {
+    font-weight: 600;
 }
+
+article div a:hover {
+    text-decoration: underline rgb(227, 213, 213);
+}
+
+
 
 @keyframes virarX {
     to {
@@ -144,6 +197,13 @@ a {
 @keyframes fecharMenu {
     to {
         right: -100%;
+    }
+}
+
+@media (max-width: 800px){
+    .principal {
+        width: 80vw;
+        margin-top: 20%;
     }
 }
 
@@ -198,7 +258,7 @@ a {
         width: 80%;
         margin-left: 20%;
         height: 10%;
-        background-color: rgb(248, 244, 244);
+        background-color: rgba(255, 255, 255, 0.919);
         position: absolute;
     }
 
