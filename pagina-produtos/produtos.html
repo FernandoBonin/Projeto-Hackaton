@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Agro</title>
+    <link rel="stylesheet" href="./styleProdutos.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="searchArea">
+            <select id="categorias" class="selectOptions">
+                <option selected value="">Categorias</option>
+                <option value="hortalicas">Hortaliças</option>
+                <option value="legumes">Legumes</option>
+                <option value="frutas">Frutas</option>
+                <option value="graos">Grãos</option>
+            </select>
+            <div class="searchBarClass">
+                <input type="text" id="searchBar">
+                <button type="button" id="btnSearch">
+                    <img src="img/searchIcon.png" class="iconSearch" alt="Botao de busca">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container produtosGrid">
+        <div class="cardProd" data-category="hortalicas" id="prod-alface">
+            <img src="./img/alface.jpg" class="imgCard">
+            <div class="contentCard" data-item="alface">
+                <h4 class="textCenter">Caixa de alface</h4>
+                <p>Valor: R$ 10,00</p>
+                <p>Qtde mínima de pedido: 10 uni.</p>
+                <span id="inputQuantProd-alface">Quantidade :
+                    <input type="text" class="quantity">uni.
+                </span>
+                <p></p>
+            </div>
+        </div>
+        <div class="cardProd" data-category="legumes" id="prod-batata">
+            <img src="./img/batata.jpg" class="imgCard">
+            <div class="contentCard" data-item="batata">
+                <h4 class="textCenter">Kilo de batata</h4>
+                <p>Valor: R$ 2,00</p>
+                <p>Qtde mínima de pedido: 20 Kg</p>
+                <span id="inputQuantProd-batata">Quantidade :
+                    <input type="text" class="quantity">
+                </span>
+                <p></p>
+            </div>
+        </div>
+        <div class="cardProd" data-category="legumes" id="prod-abobora">
+            <img src="./img/abobora.jpg" class="imgCard">
+            <div class="contentCard" data-item="abobora">
+                <h4 class="textCenter">Abóbora uni.</h4>
+                <p>Valor: R$ 0,50</p>
+                <p>Qtde mínima de pedido: 30 uni.</p>
+                <span id="inputQuantProd-abobora">Quantidade :
+                    <input type="text" class="quantity">
+                </span>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="cardProd" data-category="frutas" id="prod-maca">
+            <img src="./img/maca.jpg" class="imgCard">
+            <div class="contentCard" data-item="maca">
+                <h4 class="textCenter">Maçã kg</h4>
+                <p>Valor: R$ 2,00</p>
+                <p>Qtde mínima de pedido: 10 kg.</p>
+                <span id="inputQuantProd-maca">Quantidade :
+                    <input type="text" class="quantity">
+                </span>
+                <p></p>
+            </div>
+        </div>
+        <div class="cardProd" data-category="graos" id="prod-arroz">
+            <img src="./img/arroz.jpg" class="imgCard">
+            <div class="contentCard" data-item="arroz">
+                <h4 class="textCenter">Arroz kg</h4>
+                <p>Valor: R$ 3,00</p>
+                <p>Qtde mínima de pedido: 10 kg.</p>
+                <span id="inputQuantProd-arroz">Quantidade :
+                    <input type="text" class="quantity">
+                </span>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./produtos.js"></script>
+</body>
+
+</html>

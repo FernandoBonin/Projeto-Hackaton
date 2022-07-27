@@ -1,0 +1,154 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+* {
+  margin: 0;
+}
+.textCenter {
+  text-align: center;
+}
+.displayNone {
+  display: none;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* CSS CARDS */
+.produtosGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.cardProd {
+  margin: 10px;
+}
+.cardProd:hover {
+  transform: scale(1.01);
+}
+.imgCard {
+  height: 150px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+.contentCard {
+  min-height: 100px;
+  background-color: rgb(203, 248, 182);
+  border-radius: 0 0 20px 20px;
+  padding: 5px 15px;
+  margin-top: -5px;
+}
+.contentCard span input {
+  width: 25px;
+}
+.cardProd:hover {
+  border-radius: 0 20px 20px 20px;
+  box-shadow: 10px 20px 15px #555;
+}
+
+/* SEARCH BAR */
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  background-color: rgba(248, 227, 188, 0.9);
+  height: 42px;
+}
+#searchBar {
+  width: 550px;
+  height: 40px;
+  border-radius: 10px 0 0 10px;
+  background-color: rgba(248, 227, 188, 0.9);
+  border: none;
+  font-size: 20px;
+  padding-left: 10px;
+}
+#searchBar:focus {
+  outline: none;
+}
+.searchArea {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px 10px 10px;
+}
+.searchBarClass {
+  display: flex;
+}
+.iconSearch {
+  width: 25px;
+  height: 22px;
+}
+#btnSearch:hover {
+  background-color: rgba(247, 221, 174, 0.9);
+  transition: 0.5s;
+}
+select {
+  background-color: rgb(248, 227, 188);
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
+  width: 200px;
+}
+select.selectOptions {
+  background-image: linear-gradient(45deg, transparent 50%, #888 50%),
+    linear-gradient(135deg, #888 50%, transparent 50%),
+    linear-gradient(to right, #888, #888);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+select.selectOptions:focus {
+  background-image: linear-gradient(45deg, #aaa 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, #aaa 50%),
+    linear-gradient(to right, #888, #888);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  outline: 0;
+}
+@media only screen and (max-width: 900px) {
+  .produtosGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #searchBar {
+    width: 370px;
+  }
+  select {
+    width: 180px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .produtosGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #searchBar {
+    width: 300px;
+  }
+  select {
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .produtosGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #searchBar {
+    width: 200px;
+  }
+  select {
+    width: 150px;
+  }
+}
