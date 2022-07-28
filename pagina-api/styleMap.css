@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+#map {
+  width: 60%;
+  height: 100%;
+}
+input {
+  width: 350px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: rgb(245, 212, 151);
+  font-size: 1.1em;
+}
+button:hover {
+  background-color: rgb(247, 205, 127);
+  border: 1px solid #999;
+  transition: 0.5s;
+}
+.inputInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgb(248, 227, 188);
+  width: 40%;
+  font-size: 1.1em;
+}
+.inputInfo * {
+  margin: 20px 0 0 50px;
+}

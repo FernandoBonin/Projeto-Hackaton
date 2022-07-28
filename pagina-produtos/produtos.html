@@ -34,9 +34,9 @@
             <div class="contentCard" data-item="alface">
                 <h4 class="textCenter">Caixa de alface</h4>
                 <p>Valor: R$ 10,00</p>
-                <p>Qtde mínima de pedido: 10 uni.</p>
+                <p>Quantidade mínima de pedido: 10 uni.</p>
                 <span id="inputQuantProd-alface">Quantidade :
-                    <input type="text" class="quantity">uni.
+                    <input type="number" min="10" class="quantity"> uni.
                 </span>
                 <p></p>
             </div>
@@ -46,9 +46,9 @@
             <div class="contentCard" data-item="batata">
                 <h4 class="textCenter">Kilo de batata</h4>
                 <p>Valor: R$ 2,00</p>
-                <p>Qtde mínima de pedido: 20 Kg</p>
+                <p>Quantidade mínima de pedido: 20 Kg</p>
                 <span id="inputQuantProd-batata">Quantidade :
-                    <input type="text" class="quantity">
+                    <input type="number" min="20" class="quantity"> kg
                 </span>
                 <p></p>
             </div>
@@ -58,9 +58,9 @@
             <div class="contentCard" data-item="abobora">
                 <h4 class="textCenter">Abóbora uni.</h4>
                 <p>Valor: R$ 0,50</p>
-                <p>Qtde mínima de pedido: 30 uni.</p>
+                <p>Quantidade mínima de pedido: 30 uni.</p>
                 <span id="inputQuantProd-abobora">Quantidade :
-                    <input type="text" class="quantity">
+                    <input type="number" min="30" class="quantity"> uni.
                 </span>
                 <p></p>
             </div>
@@ -71,9 +71,9 @@
             <div class="contentCard" data-item="maca">
                 <h4 class="textCenter">Maçã kg</h4>
                 <p>Valor: R$ 2,00</p>
-                <p>Qtde mínima de pedido: 10 kg.</p>
+                <p>Quantidade mínima de pedido: 10 kg.</p>
                 <span id="inputQuantProd-maca">Quantidade :
-                    <input type="text" class="quantity">
+                    <input type="number" min="10" class="quantity"> kg
                 </span>
                 <p></p>
             </div>
@@ -83,14 +83,15 @@
             <div class="contentCard" data-item="arroz">
                 <h4 class="textCenter">Arroz kg</h4>
                 <p>Valor: R$ 3,00</p>
-                <p>Qtde mínima de pedido: 10 kg.</p>
+                <p>Quantidade mínima de pedido: 10 kg.</p>
                 <span id="inputQuantProd-arroz">Quantidade :
-                    <input type="text" class="quantity">
+                    <input type="number" min="10" class="quantity"> kg
                 </span>
                 <p></p>
             </div>
         </div>
     </section>
+    <button type="button" id="testeButton">CALCULAR</button>
 
     <script src="./produtos.js"></script>
 </body>

@@ -19,6 +19,7 @@ const produtos = [
   {
     nome: "batata",
     valor: 2,
+    qtdMinima: 20,
     categoria: "legume",
   },
   {
@@ -79,18 +80,41 @@ function selectCategory() {
   });
 }
 
+let externResult;
+
 getQuantityInput.forEach((item) => {
   item.addEventListener("change", function () {
     let divParent = this.parentElement.parentElement;
     let pElement = this.parentElement.parentElement.lastElementChild;
     let valueInputQtty = this.value;
+    let checkQtty = Number(item.getAttribute("min"));
 
     produtos.forEach((item) => {
       let dataItem = divParent.getAttribute("data-item");
       if (dataItem == item.nome) {
+        pElement.style.color = "black";
         let result = valueInputQtty * item.valor;
-        pElement.innerHTML = "Total: R$" + result;
+        let resultCurrency = result.toLocaleString("pt-br", {
+          style: "currency",
+          currency: "BRL",
+        });
+        pElement.innerHTML = "Total: " + resultCurrency;
+
+        if (valueInputQtty < checkQtty) {
+          pElement.style.color = "red";
+          pElement.innerHTML = "A quantidade miníma é " + checkQtty;
+          return;
+        }
+        externResult = result;
       }
     });
   });
 });
+
+let testeBotao = document.getElementById("testeButton");
+
+testeBotao.addEventListener("click", funcaoDeTeste);
+
+function funcaoDeTeste() {
+  console.log(externResult);
+}
