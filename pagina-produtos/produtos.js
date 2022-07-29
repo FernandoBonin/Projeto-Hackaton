@@ -63,6 +63,7 @@ function selectCategory() {
 }
 
 let externResult;
+let getProducerCategory;
 
 getQuantityInput.forEach((item) => {
   item.addEventListener("change", function () {
@@ -74,6 +75,7 @@ getQuantityInput.forEach((item) => {
     produtos.forEach((item) => {
       let dataItem = divParent.getAttribute("data-item");
       if (dataItem == item.nome) {
+        let categoryProducer = item.nome;
         pElement.style.color = "black";
         let result = valueInputQtty * item.valor;
         let resultCurrency = result.toLocaleString("pt-br", {
@@ -88,18 +90,26 @@ getQuantityInput.forEach((item) => {
           return;
         }
         externResult = result;
+        getProducerCategory = categoryProducer;
       }
     });
   });
 });
 
 let btnSendMap = document.getElementById("btnSendMap");
+let linkMap = document.getElementById("linkMap");
 
-btnSendMap.addEventListener("click", funcaoDeTeste);
+btnSendMap.addEventListener("click", funcaoExtern);
 
-function funcaoDeTeste() {
+async function funcaoExtern() {
+  console.log(linkMap, externResult);
+  if (externResult == undefined) {
+    linkMap.setAttribute("href", "");
+    alert("Escolha um produto");
+    return;
+  }
   const update = {
-    body: externResult,
+    body: { externResult, getProducerCategory },
     userId: 1,
   };
 
@@ -111,7 +121,7 @@ function funcaoDeTeste() {
     body: JSON.stringify(update),
   };
 
-  fetch("https://api-hakc4ton.herokuapp.com/novoproduto", options)
+  await fetch("https://api-hakc4ton.herokuapp.com/novoproduto", options)
     .then((data) => {
       if (!data.ok) {
         throw Error(data.status);
@@ -124,4 +134,6 @@ function funcaoDeTeste() {
     .catch((e) => {
       console.log(e);
     });
+
+  window.location.href = "../pagina-api/map.html";
 }

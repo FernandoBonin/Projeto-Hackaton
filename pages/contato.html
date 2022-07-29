@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular Frete</title>
+    <title>Fale Conosco</title>
     <link rel="shortcut icon" href="../img-logo/logo-title.ico" type="image/x-icon">
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places&callback=initMap&v=weekly"
-        defer>
-        </script>
+    <link rel="stylesheet" href="../assets/css/paginaContato.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styleMap.css">
-    <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/stylefooters.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
 </head>
 
 <body>
@@ -26,9 +23,9 @@
 
         <nav>
             <ul>
-                <li> <a href="../">Home</a> </li>
+                <li> <a href="">Home</a> </li>
                 <li> <a href="../pagina-produtos/produtos.html">Produtos</a> </li>
-                <li> <a href="../pages/contato.html">Fale Conosco</a></li>
+                <li> <a href="./contato.html">Fale Conosco</a></li>
             </ul>
             <div class="menu-botao">
                 <span class="n1"></span>
@@ -38,17 +35,39 @@
         </nav>
     </header>
 
-    <main class="section">
-        <div class="inputInfo">
-            <p class="alignTitleMap">Selecione o local da entrega:</p>
-            <input type="text" id="inputAddress2">
-            <button type="button" onclick="calcRota()">Calcular</button>
-            <p>Nosso serviço de frete cobra R$:5,00 por Km</p>
-            <p id="insertKmText"></p>
-            <p id="insertTotal"></p>
-        </div>
-        <div id="map"></div>
+    <main class="principal">
+
+        <h2>Deixe sua mensagem para falar com nossa equipe: </h2>
+
+
+        <form action="">
+
+            <input type="text" placeholder="Nome" id="nome">
+            <input type="email" placeholder="E-mail" id="email">
+            <input type="text" placeholder="Celular com DDD" id="celular">
+            <div>
+                <label for="opcoes">Selecione qual atendimento deseja: </label>
+                <select name="opcoes" id="opcoes">
+                    <option value="Atendimento ao Cliente">Atendimento ao cliente</option>
+                    <option value="Atendimento ao Produtor">Atendimento ao produtor</option>
+                </select>
+            </div>
+
+
+
+            <button type="button" id="enviarEmail">Enviar</button>
+        </form>
+
     </main>
+
+    <div class="teste"> </div>
+
+    <article class="article">
+        <div>
+            <p>Deseja entrar para o nosso catálogo? Mande um e-mail para: <a
+                    href="mailto:conexao.agro@hotmail.com">conexao.agro@hotmail.com</p>
+        </div>
+    </article>
 
     <footer>
         <div id="contact-area">
@@ -68,8 +87,7 @@
                         <div class="col-md-6 return">
                             <p><span class="contact-title">Horário de Atendimento:</span> 08:00 - 20:00h</p>
                             <p><span class="contact-title">Endereço:</span> Rua Lorem Ipsum, 777,<br>Centro - São Paulo
-                                - SP
-                            </p>
+                                - SP</p>
                         </div>
                     </div>
                     <hr>
@@ -91,11 +109,10 @@
                 </div>
             </div>
         </div>
+
     </footer>
 
-    <script src="map.js"></script>
-    <script src="../assets/js/script.js"></script>
-</body>
+    <script src="../assets/js/scriptContato.js"></script>
 </body>
 
 </html>
