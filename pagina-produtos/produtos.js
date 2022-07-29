@@ -10,41 +10,23 @@ getCategory.addEventListener("change", selectCategory);
 getSearchBar.addEventListener("change", searchProd);
 getBtnSearch.addEventListener("click", searchProd);
 
-const produtos = [
-  {
-    nome: "alface",
-    valor: 10,
-    categoria: "hortalica",
-  },
-  {
-    nome: "batata",
-    valor: 2,
-    qtdMinima: 20,
-    categoria: "legume",
-  },
-  {
-    nome: "abobora",
-    valor: 0.5,
-    categoria: "legume",
-  },
-  {
-    nome: "maca",
-    valor: 2,
-    categoria: "fruta",
-  },
-  {
-    nome: "arroz",
-    valor: 3,
-    categoria: "grao",
-  },
-];
+let produtos = [];
+
+async function server() {
+  const promisse = await fetch("https://api-hakc4ton.herokuapp.com/produtos");
+  const data = await promisse.json();
+  produtos = data;
+  return data;
+}
+server();
 
 function searchProd() {
   let searchBar = getSearchBar.value
     .toLowerCase()
     .replace("ó", "o")
     .replace("ã", "a")
-    .replace("ç", "c");
+    .replace("ç", "c")
+    .replace("ú", "u");
   let idProduct = document.getElementById("prod-" + searchBar);
 
   allCards.forEach((item) => {
@@ -111,10 +93,35 @@ getQuantityInput.forEach((item) => {
   });
 });
 
-let testeBotao = document.getElementById("testeButton");
+let btnSendMap = document.getElementById("btnSendMap");
 
-testeBotao.addEventListener("click", funcaoDeTeste);
+btnSendMap.addEventListener("click", funcaoDeTeste);
 
 function funcaoDeTeste() {
-  console.log(externResult);
+  const update = {
+    body: externResult,
+    userId: 1,
+  };
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(update),
+  };
+
+  fetch("https://api-hakc4ton.herokuapp.com/novoproduto", options)
+    .then((data) => {
+      if (!data.ok) {
+        throw Error(data.status);
+      }
+      return data.json();
+    })
+    .then((update) => {
+      console.log(update);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 }

@@ -56,9 +56,11 @@ body {
 button {
   border: none;
   cursor: pointer;
-  border-radius: 0 10px 10px 0;
   background-color: rgba(248, 227, 188, 0.9);
   height: 42px;
+}
+.searchBarClass button {
+  border-radius: 0 10px 10px 0;
 }
 #searchBar {
   width: 550px;
@@ -120,6 +122,49 @@ select.selectOptions:focus {
   background-repeat: no-repeat;
   outline: 0;
 }
+
+/* INFO SECTION */
+#infoProducts {
+  width: 80%;
+  height: 80px;
+  margin: auto;
+  background-color: rgba(248, 227, 188, 0.9);
+  border-radius: 10px;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#infoProducts p {
+  padding: 0 15px;
+}
+
+/* BUTTON SEND TO MAP */
+.btnSend {
+  display: flex;
+  justify-content: center;
+}
+#btnSendMap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  border-radius: 10px;
+  height: 70px !important;
+  width: 150px;
+  border: 1px solid #999;
+}
+#btnSendMap:hover {
+  background-color: rgb(247, 205, 127);
+  transition: 0.5s;
+}
+#btnSendMap a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+/* MEDIA QUERIES*/
 @media only screen and (max-width: 900px) {
   .produtosGrid {
     display: grid;
@@ -130,6 +175,9 @@ select.selectOptions:focus {
   }
   select {
     width: 180px;
+  }
+  #infoProducts {
+    font-size: 1em;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -143,6 +191,9 @@ select.selectOptions:focus {
   select {
     width: 170px;
   }
+  #infoProducts {
+    font-size: 1em;
+  }
 }
 @media only screen and (max-width: 576px) {
   .produtosGrid {
@@ -154,5 +205,8 @@ select.selectOptions:focus {
   }
   select {
     width: 150px;
+  }
+  #infoProducts {
+    font-size: 1em;
   }
 }
