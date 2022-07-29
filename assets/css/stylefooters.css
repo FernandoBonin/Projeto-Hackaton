@@ -1,6 +1,6 @@
 /* footer */
-footer{
-    background-color: rgb(76,121,66);
+footer {
+    background-color: rgb(76, 121, 66);
     color: white;
     display: flexbox;
     font-family: sans-serif;
@@ -10,22 +10,22 @@ footer{
     text-align: center;
 }
 
-.return-cont{
+.return-cont {
     display: flex;
-    justify-items:stretch;
+    justify-items: stretch;
     width: 100%;
     flex-direction: row;
     font-family: inherit;
     font-size: 12px;
-
 }
-.main-title{
+
+.main-title {
     padding-top: 10px;
     margin-bottom: 10px;
     font-variant: small-caps;
 }
 
-.return{
+.return {
     padding: 0px 10px 0px 10px;
     margin: -10px 10px -10px 10px;
     width: 50%;
@@ -33,15 +33,15 @@ footer{
 
 .return-menu {
     text-decoration: none;
-    color:white;
+    color: white;
     justify-items: flex-end;
 }
 
-.return-menu:hover{
-text-decoration: none;
-background-color: transparent;
-color:rgb(7, 60, 42);
-font-weight: bold;
+.return-menu:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(7, 60, 42);
+    font-weight: bold;
 }
 
 .fa:hover {
@@ -49,7 +49,7 @@ font-weight: bold;
     transition: 0.1s ease-in;
 }
 
-.fa{
+.fa {
     color: white;
     border: solid 1px white;
     border-radius: 20%;
@@ -57,9 +57,9 @@ font-weight: bold;
     height: 25px;
     text-decoration: none;
     margin: 0% 1% 0% 1%;
- }
+}
 
- .fa-facebook {
+.fa-facebook {
     padding-top: 1px;
     background: #3B5998;
 }
@@ -74,37 +74,41 @@ font-weight: bold;
 
 .fa-instagram {
     background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf)
+}
 
-} 
-
-.contact-area p{
+.contact-area p {
     font-size: 14px;
     font-family: sans-serif;
 }
 
-#copy-area .container{
+#copy-area .container {
     padding: 10px 0;
     text-align: center;
 }
 
-#copy-area .container p{
+#copy-area .container p {
     margin-bottom: 0;
     font-size: 12px;
-    color:rgb(6, 41, 29);
+    color: rgb(6, 41, 29);
 }
 
-h4{
+h4 {
     font-weight: lighter;
     font-size: 12px;
     margin-bottom: 10px;
     font-family: inherit;
 }
 
-hr{
+hr {
     opacity: 90%;
     width: 90%;
 }
 
-#social-media{
+#social-media {
     margin-bottom: 0%;
+}
+
+::before{
+    position: relative;
+    top: 18%;
 }
