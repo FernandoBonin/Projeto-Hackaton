@@ -50,10 +50,25 @@ body {
   margin: 20px 0 0 50px;
 }
 
+.btnBuy {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: rgba(69, 149, 40, 0.596);
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.btnBuy:hover {
+  background-color: rgba(26, 104, 2, 0.801);
+  border: 1px solid #999;
+  transition: 0.5s;
+}
+
 @media only screen and (max-width: 1000px) {
   .section {
     flex-direction: column;
     align-items: center;
+    padding: 10px 20px;
   }
   #map {
     width: 60%;

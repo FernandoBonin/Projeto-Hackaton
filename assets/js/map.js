@@ -36,6 +36,7 @@ const adress1 = document.getElementById("inputAddress1");
 const adress2 = document.getElementById("inputAddress2");
 const insertKmText = document.getElementById("insertKmText");
 const insertKmValue = document.getElementById("insertTotal");
+let btnBuy = document.querySelector(".btnBuy");
 
 function getLocation() {
   if (!navigator.geolocation) return null;
@@ -91,6 +92,7 @@ function calcRota() {
       insertKmValue.innerHTML =
         "O valor total somando o frete e o valor do produto é: " +
         resultCurrency;
+      btnBuy.removeAttribute("hidden");
     }
   });
 }

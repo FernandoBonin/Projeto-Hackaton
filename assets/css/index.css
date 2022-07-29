@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 
 .apresentacao {
   height: 100vh;
@@ -26,7 +29,6 @@
 
 .header-apresentacao figure {
   height: 80%;
-  width: 15%;
   display: flex;
 }
 

@@ -62,6 +62,7 @@
   background-color: rgba(120, 170, 19, 0.839);
   transition: all 0.5s ease;
   cursor: pointer;
+  border: none;
 }
 
 .principal button:hover {
