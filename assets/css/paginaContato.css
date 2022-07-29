@@ -1,279 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
-
-:not(footer *) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    height: 100vh;
-    width: 100vw;
-}
-
-.header-apresentacao {
-    display: flex;
-    width: 100%;
-    height: 10vh;
-    align-items: center;
-    z-index: 2;
-    top: 0;
-    background-color: rgba(69, 149, 40, 0.871);
-    position: fixed;
-    transition: all .2s ease;
-}
-
-.header-apresentacao figure {
-    height: 80%;
-    width: 15%;
-    display: flex;
-}
-
-figure img {
-    height: 80%;
-    margin: auto;
-}
-
-.header-apresentacao nav {
-    width: 80%;
-    height: 100%;
-}
-
-.header-apresentacao nav ul {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    font: 15pt helvetica;
-    font-weight: 600;
-    justify-content: flex-end;
-    gap: 4%;
-    list-style: none;
-    font-family: 'Poppins', sans-serif;
-}
-
-.header-apresentacao li{
-    padding: 10px;
-    transition: all .2s normal;
-}
-
-.header-apresentacao li:hover {
-    border-bottom: 2px solid #e5ff9f52;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap");
 
 .principal {
-    height: 70vh;
-    width: 40vw;
-    margin: auto;
-    margin-top: 150px;
-    margin-bottom: 8%;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-family: 'Poppins', sans-serif;
-    color: #384336;
-    
-    /* border: 2px solid rgb(59, 81, 52); */
+  height: 70vh;
+  width: 40vw;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 8%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-family: "Poppins", sans-serif;
+  color: #384336;
+
+  /* border: 2px solid rgb(59, 81, 52); */
 }
 
 .principal h2 {
-    height: 20%;
-    margin: auto;
+  height: 20%;
+  margin: auto;
 }
 
 .principal form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 80%;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  margin: auto;
 }
 
-.principal form input, .principal form div select  {
-    height: 10%;
-    outline: 0;
-    border: 2px solid #326229b0;
-    border-radius: 5px;
-    font-size: 14pt;
-    text-indent: 3%;
+.principal form input,
+.principal form div select {
+  height: 10%;
+  outline: 0;
+  border: 2px solid #326229b0;
+  border-radius: 5px;
+  font-size: 14pt;
+  text-indent: 3%;
 }
 
 .principal form div {
-    height: 20%;
-    display: flex;
-    flex-direction: column;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
 }
 
 .principal form div select {
-    height: 50%;
-    text-align: center;
-    font-size: 14pt;
-    color: #384336;
-    background-color: #1db55261;
-    display: flex;
+  height: 50%;
+  text-align: center;
+  font-size: 14pt;
+  color: #384336;
+  background-color: #1db55261;
+  display: flex;
 }
 
 .principal label {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 
 .principal button {
-    height: 10%;
-    color: white;
-    background-color: rgba(120, 170, 19, 0.839);
-    transition: all .5s ease;
-    cursor: pointer;
+  height: 10%;
+  color: white;
+  background-color: rgba(120, 170, 19, 0.839);
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .principal button:hover {
-    background-color: rgb(69, 69, 19);
+  background-color: rgb(69, 69, 19);
 }
 
 article {
-    width: 100%;
-    height: 80px;
-    background-color: #040503a0;
-    position: relative;
-    bottom: -20px;
+  width: 100%;
+  height: 80px;
+  background-color: #040503a0;
+  position: relative;
+  bottom: -20px;
 }
 
 article div {
-    height: 100%;
-    width: 80%;
-    margin: auto;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Courier New', Courier, monospace;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
 }
 
 article div a {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 article div a:hover {
-    text-decoration: underline rgb(227, 213, 213);
+  text-decoration: underline rgb(227, 213, 213);
 }
-
-
-
-@keyframes virarX {
-    to {
-        top: 20px;
-        transform: rotate(-45deg);
-    }
-}
-
-@keyframes virarX2 {
-    to {
-        top: 20px;
-        transform: rotate(45deg);
-    }
-}
-
-@keyframes voltarX {
-    to {
-        top: 10px;
-        transform: rotate(0);
-    }
-}
-
-@keyframes voltarX2 {
-    to {
-        top: 30px;
-        transform: rotate(0);
-    }
-}
-
-@keyframes abrirMenu {
-    to {
-        right: 3%;
-    }
-}
-
-@keyframes fecharMenu {
-    to {
-        right: -100%;
-    }
-}
-
-@media (max-width: 800px){
-    .principal {
-        width: 80vw;
-        margin-top: 20%;
-    }
-}
-
-@media (max-width: 600px){
-
-    .header-apresentacao {
-        height: 8%;
-        justify-content: space-between;
-    }
-
-    .header-apresentacao nav {
-        width: 40%;
-        height: 800%;
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .header-apresentacao nav ul {
-        flex-direction: column;
-        text-align: center;
-        background-color: #369c59;
-        height: 43.5%;
-        width: 100%;
-        position: relative;
-        right: -100%;
-    }
-
-    .header-apresentacao ul li{
-        border-bottom: 2px solid white;
-        width: 90%;
-        
-    }
-
-    .header-apresentacao ul li:hover {
-        background-color: #216538ab;
-    }
-
-    .menu-botao {
-        height: 40px;
-        width: 40px;
-        top: 20%;
-        right: 5%;
-        position: absolute;
-    }
-
-    .menu-botao:hover{
-        cursor: pointer;
-    }
-
-    .menu-botao span {
-        display: inline-block;
-        width: 80%;
-        margin-left: 20%;
-        height: 10%;
-        background-color: rgba(255, 255, 255, 0.919);
-        position: absolute;
-    }
-
-    .n1 {
-        top: 10px;
-    }
-
-    .n2 {
-        top: 20px;
-        transition: all .2s ease;
-    }
-
-    .n3 {
-        top: 30px;
-    }
+@media (max-width: 800px) {
+  .principal {
+    width: 80vw;
+    margin-top: 20%;
+  }
 }

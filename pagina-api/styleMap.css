@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  height: 90vh;
+  margin-top: 63px;
+}
+#map {
+  width: 60%;
+  height: 100%;
+}
+#inputAddress2 {
+  width: 350px;
+  height: 35px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+#inputAddress2:focus {
+  border: 1px solid #999;
+}
+.inputInfo button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: rgba(69, 149, 40, 0.596);
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.inputInfo button:hover {
+  background-color: rgba(26, 104, 2, 0.801);
+  border: 1px solid #999;
+  transition: 0.5s;
+}
+.inputInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #b5c3be;
+  width: 40%;
+  font-size: 1.1em;
+}
+.inputInfo * {
+  margin: 20px 0 0 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+  }
+  #map {
+    width: 60%;
+    height: 60%;
+    margin-bottom: 15px;
+  }
+  .inputInfo {
+    width: 60%;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  body {
+    background-color: #b5c3be;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #map {
+    width: 60%;
+    height: 60%;
+    align-self: center;
+    margin-bottom: 15px;
+  }
+  .inputInfo {
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  body {
+    background-color: #b5c3be;
+  }
+}
