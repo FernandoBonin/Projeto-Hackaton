@@ -1,28 +1,3 @@
-// const header = document.querySelector('.header-apresentacao')
-
-// let posicaoScroll = 0;
-// let controleAnimacao = false;
-
-// function mudarCorHeader(scrollPos) {
-//     header.style.background = `rgba(76, 121, 66, ${scrollPos})`;
-// }
-
-// document.addEventListener('scroll', () => {
-
-//     posicaoScroll = window.scrollY;
-
-//     if (!controleAnimacao) {
-
-//         window.requestAnimationFrame(() => {
-
-//             mudarCorHeader(posicaoScroll);
-//             controleAnimacao = false;
-//         });
-
-//         controleAnimacao = true;
-//     }
-// });
-
 const divMenu = document.querySelector(".menu-botao");
 const listaSpan = document.querySelectorAll(".menu-botao span");
 const navAnimacao = document.querySelector(".header-apresentacao nav ul");
