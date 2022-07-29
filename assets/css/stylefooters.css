@@ -17,6 +17,7 @@ footer {
   flex-direction: row;
   font-family: inherit;
   font-size: 12px;
+  justify-content: space-between;
 }
 
 .main-title {
@@ -99,7 +100,7 @@ footer {
   color: rgb(6, 41, 29);
 }
 
-h4 {
+footer h4 {
   font-weight: lighter;
   font-size: 12px;
   margin-bottom: 10px;

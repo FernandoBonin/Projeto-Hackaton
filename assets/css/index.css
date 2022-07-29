@@ -200,7 +200,7 @@ figure img {
   border: hidden;
 }
 
-button:hover {
+.botoes:hover {
   cursor: pointer;
 }
 
