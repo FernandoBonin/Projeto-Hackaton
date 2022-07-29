@@ -75,3 +75,48 @@ function sairMenu(){
 
 }
 
+const nome = document.querySelector('#nome');
+const email = document.querySelector('#email');
+const celular = document.querySelector('#celular');
+const atendimento = document.querySelector('#opcoes');
+const botaoEnviar = document.querySelector('#enviarEmail');
+
+botaoEnviar.addEventListener('click', enviarEmail)
+
+function enviarEmail(){
+   
+    let enviar = true;
+    [nome, email, celular, atendimento].forEach( dados => {
+        if(dados.value == ''){
+            dados.style.border = "2px solid red";
+            enviar = false
+            return
+        }
+        dados.style.border = "2px solid #326229b0";
+
+    })
+
+    if(!enviar){
+        return
+    }
+
+    const objeto = { nome: nome.value , email: email.value, celular: celular.value, atendimento: atendimento.value }
+
+    const update = {     
+        body: objeto,
+        userId: 1
+    };    
+    
+    const options = {    
+
+        method: "POST",
+        headers: {       
+            "Content-Type": "application/json",
+            },     
+        body: JSON.stringify(update),
+    };    
+
+    fetch("https://api-hakc4ton.herokuapp.com/envioemail", options)
+        .then(() => alert("Sua solicitação foi enviada"));
+
+}
